@@ -1,0 +1,27 @@
+<div class="section-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3" *ngFor="let Product of filterProdcuctByStatus()">
+                <div class="card card-product" >
+                    <div class="card-image">
+                        <img class="img" src="../../assets/images/Watch1.jpg">
+                    </div>
+                    <div class="table">
+                        <h6 class="category text-rose">{{Product.category}}</h6>
+                        <h4 class="card-caption">
+                            {{Product.title}}
+                        </h4>
+                        <div class="card-description"> {{Product.description}}</div>
+                        <div class="CD_footer">
+                            <div class="stats">
+                                <button class="btn btn-danger" (click)="DeleteProduct(Product.ProdId)">Delete</button> </div>
+                            <div class="stats">
+                                <button class="btn btn-success" (click)="RestoreProduct(Product.ProdId)">Restore</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
